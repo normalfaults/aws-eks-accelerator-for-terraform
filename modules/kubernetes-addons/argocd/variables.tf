@@ -15,7 +15,7 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-
+ 
 variable "helm_config" {
   type        = any
   default     = {}
@@ -25,7 +25,7 @@ variable "helm_config" {
 variable "argocd_applications" {
   type        = any
   default     = {}
-  description = "ARGO CD Applications config to bootstrap the cluster"
+  description = "ArgoCD Application config used to bootstrap a cluster."
 }
 
 variable "eks_cluster_id" {

@@ -65,7 +65,7 @@ module "argocd" {
   helm_config         = var.argocd_helm_config
   argocd_applications = var.argocd_applications
   eks_cluster_id      = var.eks_cluster_id
-  add_on_config       = local.argocd_add_on_config
+  add_on_config       = { for k, v in local.argocd_gitops_config : k => v if v != null }
 }
 
 module "aws_for_fluent_bit" {
